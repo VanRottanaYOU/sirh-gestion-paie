@@ -21,7 +21,7 @@ import dev.paie.entite.ResultatCalculRemuneration;
 public class CalculerRemunerationServiceSimpleTest {
 
 	@Autowired
-	private CalculerRemunerationServiceSimple remunerationService;
+	private CalculerRemunerationService remunerationService;
 
 	@Autowired
 	private BulletinSalaire bulletinSalaire;

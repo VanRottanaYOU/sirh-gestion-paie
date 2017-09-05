@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Grade {
 	
-	private Integer id;
+	private int id;
 	private String code;
 	private BigDecimal nbHeuresBase;
 	private BigDecimal tauxBase;
@@ -27,11 +27,16 @@ public class Grade {
 	public void setTauxBase(BigDecimal tauxBase) {
 		this.tauxBase = tauxBase;
 	}
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+	
+	@Override
+	public String toString() {
+		return "Grade [id=" + id + ", code=" + code + ", nbHeuresBase=" + nbHeuresBase + ", tauxBase=" + tauxBase + "]";
 	}
 	
 	
