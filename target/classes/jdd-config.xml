@@ -64,7 +64,7 @@
 	</bean>
 	
 	
-	<!-- importer une configuration dans une autre -->
+<!-- importer une configuration dans une autre -->
 <!-- 	<import resource="classpath:grade-liste.xml" /> -->
 
 <!-- 	<bean id="ent1" class="dev.paie.entite.Grade"> -->

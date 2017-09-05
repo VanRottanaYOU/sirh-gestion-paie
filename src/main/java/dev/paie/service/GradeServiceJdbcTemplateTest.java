@@ -64,7 +64,7 @@ public class GradeServiceJdbcTemplateTest {
 				grades = gradeService.lister();
 				System.out.println("2 : "+grades);
 				assertTrue(gradeUpdated.equals(grades.get(0)));
-//				assertEquals(gradeUpdated, grades.get(0));
+
 			}
 		}
 		

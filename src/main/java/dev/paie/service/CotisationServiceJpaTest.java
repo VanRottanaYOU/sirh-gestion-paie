@@ -55,7 +55,7 @@ public class CotisationServiceJpaTest {
 				cotisations = cotisationService.lister();
 				System.out.println("2 : "+cotisations);
 				assertTrue(cotisationUpdated.equals(cotisations.get(0)));
-//				assertEquals(gradeUpdated, grades.get(0));
+
 			}
 		}
 	
