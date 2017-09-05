@@ -1,5 +1,7 @@
 package dev.paie.service;
 
+import static org.junit.Assert.*;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -28,21 +30,44 @@ public class GradeServiceJdbcTemplateTest {
 	@Autowired
 	private Grade nouveauGrade;
 
-	// @Autowired(required = true)
-	// private PaieUtils paieUtils;
 
 	@Test
 	public void test_sauvegarder_lister_mettre_a_jour() {
 		// TODO sauvegarder un nouveau grade
 
-//		DataSource dataSource;
-		gradeService.sauvegarder(nouveauGrade);
-		System.out.println("1 : "+gradeService.lister());
-
-		nouveauGrade=gradeService.lister().get(0);
-		nouveauGrade.setCode("B12");
+//		{
+//		//test présence en base
+//		gradeService.sauvegarder(nouveauGrade);
+//
+//		nouveauGrade=gradeService.lister().get(0);			
+//		nouveauGrade.setCode("B12");
+//		
+//		gradeService.mettreAJour(nouveauGrade);
+//		}
 		
-		gradeService.mettreAJour(nouveauGrade);
-		System.out.println("2 : "+gradeService.lister());
+		{//test insertion en base
+			System.out.println(nouveauGrade);
+			gradeService.sauvegarder(nouveauGrade);
+			List<Grade> grades = gradeService.lister();
+			System.out.println(grades);
+			assertTrue(!grades.isEmpty());
+			assertEquals(1, gradeService.lister().size());
+		}
+		
+		{
+			List<Grade> grades = gradeService.lister();
+			if (!grades.isEmpty()) {
+				Grade gradeUpdated = grades.get(0);
+				gradeUpdated.setCode("YOU");
+				gradeService.mettreAJour(gradeUpdated);
+				System.out.println("1 : "+gradeUpdated);
+				grades = gradeService.lister();
+				System.out.println("2 : "+grades);
+				assertTrue(gradeUpdated.equals(grades.get(0)));
+//				assertEquals(gradeUpdated, grades.get(0));
+			}
+		}
+		
+
 	}
 }

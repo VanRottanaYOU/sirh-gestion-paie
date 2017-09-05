@@ -58,6 +58,53 @@ public class Cotisation {
 		return "Cotisation [id=" + id + ", code=" + code + ", libelle=" + libelle + ", tauxSalarial=" + tauxSalarial
 				+ ", tauxPatronal=" + tauxPatronal + "]";
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((code == null) ? 0 : code.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((libelle == null) ? 0 : libelle.hashCode());
+		result = prime * result + ((tauxPatronal == null) ? 0 : tauxPatronal.hashCode());
+		result = prime * result + ((tauxSalarial == null) ? 0 : tauxSalarial.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cotisation other = (Cotisation) obj;
+		if (code == null) {
+			if (other.code != null)
+				return false;
+		} else if (!code.equals(other.code))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (libelle == null) {
+			if (other.libelle != null)
+				return false;
+		} else if (!libelle.equals(other.libelle))
+			return false;
+		if (tauxPatronal == null) {
+			if (other.tauxPatronal != null)
+				return false;
+		} else if (!tauxPatronal.equals(other.tauxPatronal))
+			return false;
+		if (tauxSalarial == null) {
+			if (other.tauxSalarial != null)
+				return false;
+		} else if (!tauxSalarial.equals(other.tauxSalarial))
+			return false;
+		return true;
+	}
 	
 	
 	
