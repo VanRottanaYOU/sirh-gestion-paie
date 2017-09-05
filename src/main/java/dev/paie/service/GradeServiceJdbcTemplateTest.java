@@ -45,7 +45,7 @@ public class GradeServiceJdbcTemplateTest {
 //		gradeService.mettreAJour(nouveauGrade);
 //		}
 		
-		{//test insertion en base
+		{//test insertion en base vide
 			System.out.println(nouveauGrade);
 			gradeService.sauvegarder(nouveauGrade);
 			List<Grade> grades = gradeService.lister();
