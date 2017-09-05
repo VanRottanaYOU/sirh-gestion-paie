@@ -42,6 +42,7 @@ public class GradeServiceJdbcTemplateTest {
 
 		nouveauGrade=gradeService.lister().get(0);
 		nouveauGrade.setCode("B12");
+		
 		gradeService.mettreAJour(nouveauGrade);
 		System.out.println("2 : "+gradeService.lister());
 	}
