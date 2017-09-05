@@ -37,7 +37,6 @@ public class GradeServiceJdbcTemplateTest {
 
 //		DataSource dataSource;
 		gradeService.sauvegarder(nouveauGrade);
-
 		System.out.println("1 : "+gradeService.lister());
 
 		nouveauGrade=gradeService.lister().get(0);
