@@ -36,16 +36,13 @@ public class GradeServiceJdbcTemplateTest {
 		// TODO sauvegarder un nouveau grade
 
 //		DataSource dataSource;
-		 gradeService.sauvegarder(nouveauGrade);
+		gradeService.sauvegarder(nouveauGrade);
 
-		System.out.println(gradeService.lister());
-		// List<Grade> grades =gradeService.lister();
-		//// grades.get(0).setCode("B12");
+		System.out.println("1 : "+gradeService.lister());
+
+		nouveauGrade=gradeService.lister().get(0);
 		nouveauGrade.setCode("B12");
-		System.out.println(nouveauGrade);
-		// nouveauGrade.setNbHeuresBase(125.00);
-		// nouveauGrade.setTauxBase(tauxBase);
 		gradeService.mettreAJour(nouveauGrade);
-		System.out.println(gradeService.lister());
+		System.out.println("2 : "+gradeService.lister());
 	}
 }

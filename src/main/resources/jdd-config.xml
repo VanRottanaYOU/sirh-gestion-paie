@@ -9,7 +9,7 @@
 		<property name="remunerationEmploye" ref="ent2"></property>
 		<property name="primeExceptionnelle" value="1000"></property>
 	</bean>
-
+	
 	<import resource="classpath:cotisations-non-imposables.xml" />
 	
 	

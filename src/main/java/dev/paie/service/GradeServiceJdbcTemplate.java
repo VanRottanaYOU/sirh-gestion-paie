@@ -44,7 +44,7 @@ public class GradeServiceJdbcTemplate implements GradeService {
 
 	@Override
 	public List<Grade> lister() {
-		List<Grade> actors = this.jdbcTemplate.query(
+		List<Grade> grades = this.jdbcTemplate.query(
 		        "select id,code, nbHeuresBase, tauxBase from grade",
 		        new RowMapper<Grade>() {
 		            public Grade mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -56,6 +56,6 @@ public class GradeServiceJdbcTemplate implements GradeService {
 		                return grade;
 		            }
 		        });
-		return actors;
+		return grades;
 	}
 }
