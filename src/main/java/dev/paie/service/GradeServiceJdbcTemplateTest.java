@@ -36,7 +36,7 @@ public class GradeServiceJdbcTemplateTest {
 		// TODO sauvegarder un nouveau grade
 
 //		DataSource dataSource;
-		// gradeService.sauvegarder(nouveauGrade);
+		 gradeService.sauvegarder(nouveauGrade);
 
 		System.out.println(gradeService.lister());
 		// List<Grade> grades =gradeService.lister();

@@ -29,8 +29,8 @@ public class GradeServiceJdbcTemplate implements GradeService {
 	@Override
 	public void sauvegarder(Grade nouveauGrade) {
 		this.jdbcTemplate.update(
-		        "insert into grade (id, code, nbHeuresBase,tauxBase) values (?, ?, ?, ?)",
-		        nouveauGrade.getId(),nouveauGrade.getCode(), nouveauGrade.getNbHeuresBase(),nouveauGrade.getTauxBase());
+		        "insert into grade (id, code, nbHeuresBase,tauxBase) values (NULL, ?, ?, ?)",
+		        nouveauGrade.getCode(), nouveauGrade.getNbHeuresBase(),nouveauGrade.getTauxBase());
 		
 	}
 
