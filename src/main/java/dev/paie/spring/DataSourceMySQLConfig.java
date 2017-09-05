@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+
 @Configuration
 @ComponentScan({"dev.paie.service", "dev.paie.util"})
 @ImportResource("classpath:jdd-config.xml")
