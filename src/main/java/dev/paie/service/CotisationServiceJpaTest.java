@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -38,6 +39,7 @@ public class CotisationServiceJpaTest {
 //			System.out.println(cotisationService.lister());
 //		}
 		{// test insertion en base
+			System.out.println(listeCotisation);
 			System.out.println(listeCotisation.get(0));
 			cotisationService.sauvegarder(listeCotisation.get(0));
 			List<Cotisation> cotisations = cotisationService.lister();

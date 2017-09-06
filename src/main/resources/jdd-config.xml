@@ -10,6 +10,9 @@
 		<property name="primeExceptionnelle" value="1000"></property>
 	</bean>
 	
+		<!-- importer une configuration dans une autre -->
+	<import resource="classpath:cotisations-imposables.xml" />
+	
 	<import resource="classpath:cotisations-non-imposables.xml" />
 	
 	
@@ -39,8 +42,7 @@
 			</util:list>
 		</property>
 	</bean>
-	<!-- importer une configuration dans une autre -->
-	<import resource="classpath:cotisations-imposables.xml" />
+
 	
 	
 	<bean id="ent2" class="dev.paie.entite.RemunerationEmploye">
