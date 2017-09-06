@@ -51,6 +51,7 @@ public class AvantageRepositoryTest {
 			System.out.println("maListe : "+maListe);
 		}
 		{
+			// sans utiliser le save)
 			Avantage avantageFound=avantageRepository.findById(20);
 			avantageRepository.setUpdate("houla", "YES", new BigDecimal(33), 20);
 			Avantage avantageUpdated=avantageRepository.findById(20);

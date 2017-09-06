@@ -25,6 +25,7 @@ public interface AvantageRepository extends JpaRepository<Avantage, Integer> {
 //	Avantage findById(@Param("Id") Integer id);
 	Avantage findById(Integer id);
 	
+// création d'une méthode update au lieu d'utiliser save	
 	@Modifying
 	@Query("update Avantage u set u.code = ?1, u.nom = ?2, u.montant = ?3 where u.id = ?4")
 	int setUpdate(String code, String nom, BigDecimal montant, Integer id);
