@@ -31,7 +31,8 @@ public class AvantageRepositoryTest {
 	//TODO modifier un avantage
 	//TODO vérifier que les modifications sont bien prises en compte via la méthode findOne
 //		{
-//			final Avantage avantage=new Avantage();		
+//			final Avantage avantage=new Avantage();	
+//			avantage.setId(21);
 //			avantage.setCode("TOTO");
 //			avantage.setNom("VAN");
 //			avantage.setMontant( new BigDecimal(20));
@@ -41,7 +42,7 @@ public class AvantageRepositoryTest {
 
 
 		{
-			Avantage avantageFound=avantageRepository.findById(20);	
+			Avantage avantageFound=avantageRepository.findById(22);	
 			System.out.println("FindById : " +avantageFound);
 			assertTrue(avantageFound.getId()>0);	
 		}
@@ -52,10 +53,21 @@ public class AvantageRepositoryTest {
 		}
 		{
 			// sans utiliser le save)
-			Avantage avantageFound=avantageRepository.findById(20);
-			avantageRepository.setUpdate("houla", "YES", new BigDecimal(33), 20);
-			Avantage avantageUpdated=avantageRepository.findById(20);
-			assertTrue(avantageFound.equals(avantageUpdated));
+			Avantage avantageFound=avantageRepository.findById(22);
+			System.out.println("Update avant : " +avantageFound);
+			avantageRepository.setUpdate("houla", "YES", new BigDecimal(33), 22);
+			Avantage avantageUpdated=avantageRepository.findById(22);
+			System.out.println("Update après : " +avantageUpdated);
+			assertTrue(!avantageFound.equals(avantageUpdated));
+		}
+		{
+			Avantage avantageFound=avantageRepository.findById(22);
+			avantageFound.setId(21);
+			avantageFound.setCode("TATA");
+			avantageFound.setNom("VAN");
+			avantageFound.setMontant( new BigDecimal(20));
+			Avantage newAvantage=avantageRepository.save(avantageFound);
+			assertTrue(!avantageFound.equals(newAvantage));
 		}
 	}
 }
