@@ -6,12 +6,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="AVANTAGES")
 public class Avantage {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String code;
@@ -19,6 +22,27 @@ public class Avantage {
 	private String nom;
 	
 	private BigDecimal montant;
+
+	@ManyToOne
+	private ProfilRemuneration profilRemuneration;
+	
+	
+	public Avantage() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	public Avantage(String code, String nom, BigDecimal montant, ProfilRemuneration profilRemuneration) {
+		super();
+		this.code = code;
+		this.nom = nom;
+		this.montant = montant;
+		this.profilRemuneration = profilRemuneration;
+	}
+
+
 
 	public String getCode() {
 		return code;

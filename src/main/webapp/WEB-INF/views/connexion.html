@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Astuces</title>
+<!--         <link type="text/css" rel="stylesheet" href="inc/style.css" /> -->
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="/simplewebapp/ConnexionServlet">
+                <fieldset>
+                    <legend>Informations client</legend>
+    
+                    <label for="identifiant">Nom <span class="requis"></span></label>
+                    <input type="text" id="identifiant" name="identifiant" value="" size="20" maxlength="20" />
+                    <br />
+                    
+                    <label for="motDePasse">Prénom </label>
+                    <input type="text" id="motDePasse" name="motDePasse" value="" size="20" maxlength="20" />
+                    <br />
+    
+                </fieldset>
+                <input type="submit" value="Valider"  />
+                <input type="reset" value="Remettre à zéro" /> <br />
+            </form>
+        </div>
+    </body>
+</html>

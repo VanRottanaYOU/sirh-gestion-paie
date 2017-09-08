@@ -14,6 +14,9 @@
 	<import resource="classpath:cotisations-imposables.xml" />
 	
 	<import resource="classpath:cotisations-non-imposables.xml" />
+	<import resource="classpath:entreprises.xml" />
+	<import resource="classpath:grades.xml" />
+	<import resource="classpath:profils-remuneration.xml" />
 	
 	
 	<bean id="profil1" class="dev.paie.entite.ProfilRemuneration">
@@ -53,7 +56,7 @@
 	</bean>
 	
 	<bean id="ent1" class="dev.paie.entite.Grade">
-		<property name="id" value="1"/>
+<!-- 		<property name="id" value="1"/> -->
 		<property name="code" value="A12"/>
 		<property name="nbHeuresBase" value="151.67"/>
 		<property name="tauxBase" value="11.0984"/>

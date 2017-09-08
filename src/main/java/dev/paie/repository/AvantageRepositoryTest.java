@@ -52,22 +52,37 @@ public class AvantageRepositoryTest {
 			System.out.println("maListe : "+maListe);
 		}
 		{
+//			long T1 = System.currentTimeMillis();
+//			for (int i =0 ; i<100 ; i++)
+//			{
 			// sans utiliser le save)
 			Avantage avantageFound=avantageRepository.findById(22);
-			System.out.println("Update avant : " +avantageFound);
+//			System.out.println("Update avant : " +avantageFound);
 			avantageRepository.setUpdate("houla", "YES", new BigDecimal(33), 22);
 			Avantage avantageUpdated=avantageRepository.findById(22);
-			System.out.println("Update après : " +avantageUpdated);
-			assertTrue(!avantageFound.equals(avantageUpdated));
+//			System.out.println("Update après : " +avantageUpdated);
+//			assertTrue(!avantageFound.equals(avantageUpdated));
+//			}
+//			long T2 = System.currentTimeMillis();
 		}
 		{
-			Avantage avantageFound=avantageRepository.findById(22);
-			avantageFound.setId(21);
-			avantageFound.setCode("TATA");
-			avantageFound.setNom("VAN");
-			avantageFound.setMontant( new BigDecimal(20));
-			Avantage newAvantage=avantageRepository.save(avantageFound);
-			assertTrue(!avantageFound.equals(newAvantage));
+//			long T3 = System.currentTimeMillis();
+//			for (int i =0 ; i<100 ; i++)
+//			{
+				
+				Avantage avantageFound=avantageRepository.findById(22);
+				avantageFound.setId(21);
+				avantageFound.setCode("TATA");
+				avantageFound.setNom("VAN");
+				avantageFound.setMontant( new BigDecimal(20));
+				Avantage newAvantage=avantageRepository.save(avantageFound);
+				assertTrue(!avantageFound.equals(newAvantage));
+				
+//			}
+//			long T4 = System.currentTimeMillis();
+//			System.out.println(T2-T1);
+//			System.out.println(T4-T3);
+//			
 		}
 	}
 }

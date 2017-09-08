@@ -31,13 +31,13 @@ public class CotisationServiceJpaTest {
 	
 	@Test
 	public void test_sauvegarder_lister_mettre_a_jour() {
-//		{
-//			cotisationService.sauvegarder(listeCotisation.get(0));	
-//			System.out.println(cotisationService.lister());
-//			listeCotisation.get(0).setCode("VAN");
-//			cotisationService.mettreAJour(listeCotisation.get(0));
-//			System.out.println(cotisationService.lister());
-//		}
+		{
+			cotisationService.sauvegarder(listeCotisation.get(0));	
+			System.out.println(cotisationService.lister());
+			listeCotisation.get(0).setCode("VAN");
+			cotisationService.mettreAJour(listeCotisation.get(0));
+			System.out.println(cotisationService.lister());
+		}
 		{// test insertion en base
 			System.out.println(listeCotisation);
 			System.out.println(listeCotisation.get(0));
