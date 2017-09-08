@@ -13,7 +13,7 @@
     <body>
 
         <div>
-            <form method="get" action="<c:url value="/mvc/bulletin/AjouterRemuneration"/>">
+            <form method="get" action="<c:url value="/mvc/bulletins/AjouterRemuneration"/>">
                 <fieldset>
                     <legend>Créer bulletin de salaire</legend>
                     

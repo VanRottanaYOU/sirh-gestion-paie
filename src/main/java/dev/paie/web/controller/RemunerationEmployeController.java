@@ -41,7 +41,7 @@ public class RemunerationEmployeController {
 	public ModelAndView creerEmploye() {
 
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("bulletin/creerBulletin");
+		mv.setViewName("bulletins/creerBulletin");
 		mv.addObject("listeRemuneration",remunerationRepository.findAll());
 		mv.addObject("listePeriode",periodeRepository.findAll());
 				
@@ -70,7 +70,7 @@ public class RemunerationEmployeController {
 		bulletinRepository.save(monBulletinSalaire);
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("employes/remunerationAjoutee");		
+		mv.setViewName("bulletins/remunerationAjoutee");		
 		mv.addObject("employe",monBulletinSalaire);
 		
 		return mv;
